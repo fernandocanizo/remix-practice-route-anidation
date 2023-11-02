@@ -1,10 +1,11 @@
-import type { LinksFunction } from "@remix-run/node";
-
 import { cssBundleHref } from "@remix-run/css-bundle";
 import "@picocss/pico/css/pico.min.css";
 import allSiteCss from "~/styles/allSite.css";
 
+import type { LinksFunction } from "@remix-run/node";
+
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -19,6 +20,12 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const closeSideNav = () => {
+    console.log("closeSideNav");
+    document.getElementById("sidenav")!.style.width = "0";
+    document.getElementById("main")!.style.marginLeft= "0";
+  };
+
   return (
     <html lang="en">
       <head>
@@ -28,6 +35,18 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <aside id="sidenav">
+          <span className="closebtn" onClick={closeSideNav}>&times;</span>
+          <ul>
+            <li>
+              <Link to="/one">One</Link>
+            </li>
+            <li>
+              <Link to="/two">Two</Link>
+            </li>
+          </ul>
+        </aside>
+
         <Outlet />
         <ScrollRestoration />
         <Scripts />
