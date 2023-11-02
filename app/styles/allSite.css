@@ -1,4 +1,4 @@
-.sidenav {
+#sidenav {
   height: 100%;
   width: 0;
   position: fixed;
@@ -11,12 +11,17 @@
   padding-top: 60px;
 }
 
-.sidenav .closebtn {
+#sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+#sidenav-opener {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 #main {
