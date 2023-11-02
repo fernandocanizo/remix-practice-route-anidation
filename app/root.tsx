@@ -1,5 +1,9 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
+
+import { cssBundleHref } from "@remix-run/css-bundle";
+import "@picocss/pico/css/pico.min.css";
+import allSiteCss from "~/styles/allSite.css";
+
 import {
   Links,
   LiveReload,
@@ -11,6 +15,7 @@ import {
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: allSiteCss },
 ];
 
 export default function App() {
