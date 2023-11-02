@@ -24,6 +24,14 @@ export default function App() {
     console.log("closeSideNav");
     document.getElementById("sidenav")!.style.width = "0";
     document.getElementById("main")!.style.marginLeft= "0";
+    document.getElementById("sidenav-opener")!.style.display = "inline";
+  };
+
+  const openSideNav = () => {
+    console.log("openSideNav");
+    document.getElementById("sidenav")!.style.width = "250px";
+    document.getElementById("main")!.style.marginLeft = "250px";
+    document.getElementById("sidenav-opener")!.style.display = "none";
   };
 
   return (
@@ -39,6 +47,9 @@ export default function App() {
           <span className="closebtn" onClick={closeSideNav}>&times;</span>
           <ul>
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="/one">One</Link>
             </li>
             <li>
@@ -47,7 +58,11 @@ export default function App() {
           </ul>
         </aside>
 
-        <Outlet />
+        <main id="main">
+          <span id="sidenav-opener" onClick={openSideNav}>&#9776;</span>
+          <Outlet />
+        </main>
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
