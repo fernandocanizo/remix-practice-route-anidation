@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@picocss/pico':
+    specifier: ^1.5.10
+    version: 1.5.10
   '@remix-run/css-bundle':
     specifier: ^2.2.0
     version: 2.2.0
@@ -1069,6 +1072,10 @@ packages:
     dependencies:
       which: 3.0.1
     dev: true
+
+  /@picocss/pico@1.5.10:
+    resolution: {integrity: sha512-+LafMsrwPxXQMk6sI///TmSInCwwZmq+K7SikyL3N/4GhhwzyPC+TQLUEqmrLyjluR+uIpFFcqjty30Rtr6GxQ==}
+    dev: false
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
