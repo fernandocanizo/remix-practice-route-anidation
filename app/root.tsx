@@ -24,13 +24,15 @@ export default function App() {
     console.log("closeSideNav");
     document.getElementById("sidenav")!.style.width = "0";
     document.getElementById("main")!.style.marginLeft= "0";
+    document.getElementById("main")!.style.width = "100%";
     document.getElementById("sidenav-opener")!.style.display = "inline";
   };
 
   const openSideNav = () => {
     console.log("openSideNav");
-    document.getElementById("sidenav")!.style.width = "250px";
-    document.getElementById("main")!.style.marginLeft = "250px";
+    document.getElementById("sidenav")!.style.width = "10vw";
+    document.getElementById("main")!.style.marginLeft = "10vw";
+    document.getElementById("main")!.style.width = "89vw";
     document.getElementById("sidenav-opener")!.style.display = "none";
   };
 

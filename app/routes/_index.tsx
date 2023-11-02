@@ -11,6 +11,8 @@ export default function Index() {
   return (
     <>
       <h1>Pusher Sidenav Index</h1>
+
+      <iframe id="old-nexus" src="http://localhost:3000/" title="Old Nexus Client"></iframe>
     </>
   );
 }
